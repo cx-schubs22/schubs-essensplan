@@ -1,0 +1,43 @@
+.Box {
+    float: left;
+    width: 32%;
+    margin-right: 2%;
+    padding: 20px;
+    background: #ffffff;
+    box-sizing: border-box;
+    margin-right: 0;
+       
+}
+
+
+
+ion-img {
+    height: 550px;
+    object-fit: cover;
+
+    
+}
+.Preis {
+    color: green;
+    font-size: 25px;
+
+
+
+ 
+}
+
+#speiseplan {
+    display: flex;
+    flex-wrap: wrap;
+ 
+    
+}
+
+.Kategorie {
+
+    display: block;
+    height: 15px;
+    
+
+
+}

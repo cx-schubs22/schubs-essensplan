@@ -1,13 +1,30 @@
 <ion-content>
   <!-- TODO: Schöneres Layouting für Anzeige von Gerichten -->
-  <ul>
-    <li *ngFor="let gericht of hauptgerichte">
-      {{ gericht.Bezeichnung }} ({{ gericht.Preis }})
-    </li>
 
-    <li *ngFor="let gericht of beilagen">
-      {{ gericht.Bezeichnung }} ({{ gericht.Preis }})
-    </li>
-  </ul>
+
+
+  <div id="speiseplan">
+    <ion-card class="Box" *ngFor="let gericht of hauptgerichte">
+      <ion-img [src]="gericht.ImagePfad"></ion-img>
+      <ion-card-title>{{ gericht.Bezeichnung }}</ion-card-title>
+      <ion-card-subtitle> <span class="Kategorie"> {{ gericht.Kategorie}}</span>
+
+      <span class="Preis"> {{ gericht.Preis | currency:'EUR':true }}</span>
+      </ion-card-subtitle>
+
+    </ion-card>
+
+
+
+    <ion-card class="Box" *ngFor="let gericht of beilagen">
+      <ion-card-title>{{ gericht.Bezeichnung }}</ion-card-title>
+      <ion-card-subtitle> <span class="Kategorie">{{ gericht.Kategorie}}</span>
+
+      <span class="Preis"> {{ gericht.Preis | currency:'EUR':true }}</span> 
+    </ion-card-subtitle>
+    </ion-card>
+  </div>
+
+
 
 </ion-content>
