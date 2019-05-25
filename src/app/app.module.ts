@@ -8,10 +8,12 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe, registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
+import { MatNativeDateModule } from '@angular/material';
 
 registerLocaleData(localeDe, 'de');
 
@@ -22,7 +24,9 @@ registerLocaleData(localeDe, 'de');
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatNativeDateModule
   ],
   providers: [
     StatusBar,
@@ -34,3 +38,6 @@ registerLocaleData(localeDe, 'de');
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
+
+

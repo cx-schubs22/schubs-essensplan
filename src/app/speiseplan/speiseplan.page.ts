@@ -4,6 +4,7 @@ import { Service } from '../services/service'
 import { Gericht } from '../classes/gericht';
 import { combineLatest } from 'rxjs';
 
+
 @Component({
   selector: 'app-speiseplan',
   templateUrl: './speiseplan.page.html',
@@ -29,6 +30,9 @@ export class SpeiseplanPage implements OnInit {
     this.service.ladeGericht(id).subscribe(gericht => console.log(gericht));
   }
 
+  datumGeandert(): void {
+    this.getSpeiseplan();
+  }
   getSpeiseplan(): void {
 
     combineLatest(

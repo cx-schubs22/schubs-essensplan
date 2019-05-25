@@ -9,6 +9,9 @@
        
 }
 
+ion-card-title{
+    height: 55px;
+}
 
 
 ion-img {
@@ -20,16 +23,13 @@ ion-img {
 .Preis {
     color: green;
     font-size: 25px;
-
-
-
+    float: left;
  
 }
 
 #speiseplan {
     display: flex;
     flex-wrap: wrap;
- 
     
 }
 
@@ -37,7 +37,11 @@ ion-img {
 
     display: block;
     height: 15px;
-    
-
 
 }
+
+.Kalendar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
