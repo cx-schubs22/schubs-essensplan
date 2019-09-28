@@ -3,14 +3,22 @@
 
   <!-- TODO: Schöneres Layouting für Anzeige von Gerichten -->
   
-  <mat-form-field class="Kalendar">
-<input [(ngModel)]="selectedDate" matInput [matDatepicker]="picker" (dateChange)="datumGeandert()" placeholder="Choose a date">
+  <div id="start">
+
+    <ion-card class="Hauptblock">
+          <a class="Umformung">
+            <img class="Bearbeitung"  style="float: left;" src="../../assets/hotel-vivendi.svg"/> <h1 class="Text1">Speiseplan</h1> 
+          </a>
+    </ion-card>
+  </div>
+
+
+  <mat-form-field class="Kalendar"> 
+    <input [(ngModel)]="selectedDate" matInput [matDatepicker]="picker" (dateChange)="datumGeandert()" placeholder="Choose a date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
-  
-
-
+      
   <div id="speiseplan">
  
 
@@ -23,7 +31,7 @@
       </ion-card-subtitle>
 
     </ion-card>
-    
+          
 
 
 
